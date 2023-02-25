@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transportation App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Transportation App</h1>
+      <div class="tabs">
+        <button class="tab-button active" data-tab="map">Map</button>
+        <button class="tab-button" data-tab="directions">Directions</button>
+        <button class="tab-button" data-tab="public-transportation">Public Transportation</button>
+      </div>
+      <div class="tab-content active" id="map-tab">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163814.20035960908!2d-122.50764086733398!3d37.75767909879065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858094cda9b829%3A0x14f1e26606d36ab3!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1645569467506!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="tab-content" id="directions-tab">
+        <form id="directions-form">
+          <label for="origin">Origin:</label>
+          <input type="text" id="origin" placeholder="Enter starting address" />
+          <label for="destination">Destination:</label>
+          <input type="text" id="destination" placeholder="Enter destination address" />
+          <button type="submit">Get Directions</button>
+        </form>
+        <div id="directions-result"></div>
+      </div>
+      <div class="tab-content" id="public-transportation-tab">
+        <form id="public-transportation-form">
+          <label for="location">Location:</label>
+          <input type="text" id="location" placeholder="Enter your location" />
+          <label for="destination">Destination:</label>
+          <input type="text" id="destination" placeholder="Enter destination address" />
+          <button type="submit">Find Transit Options</button>
+        </form>
+        <div id="public-transportation-result"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
